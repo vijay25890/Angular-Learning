@@ -1,0 +1,108 @@
+<!-- INPUT AND BUTTONS -->
+<p>
+  Start editing to see some magic happen :)
+  <button (click)="getData('hello')">Click me</button>
+</p>
+<input type="text" #box (keyup)="getData(box.value)" placeholder="type here" />
+<input
+  type="text"
+  #box1
+  (keydown)="getData(box1.value)"
+  placeholder="type here"
+/>
+<input type="text" #box2 (blur)="getData(box2.value)" placeholder="type here" />
+<input
+  type="text"
+  #box3
+  (input)="getData(box3.value)"
+  placeholder="type here"
+/>
+<h3 (mouseleave)="getData('over')">Over</h3>
+<input type="text" #e (keyup)="get(e.value)" placeholder="type here" />
+<input type="text" #b placeholder="name" name="name" />
+<button (click)="getValue(b.value)">get</button>
+<p>{{ display }}</p>
+<button (click)="counter('+')">Up</button>
+<button (click)="counter('-')">Down</button>
+<p>{{ count }}</p>
+
+<!-- PROPERTY BINDING -->
+<input type="text" [value]="name" [disabled]="dis" />
+<!-- INTERPOLATION -->
+<input type="text" value="{{ name }}" disabled="{{ dis }}" />
+
+<!-- IF ELSE -->
+<h1 *ngIf="show; then ifi; else elsei"></h1>
+<ng-template #ifi>
+  <h1>If Condition</h1>
+</ng-template>
+<ng-template #elsei>
+  <h1>Else Condition</h1>
+</ng-template>
+
+<!-- MULTIPLE IF -->
+<ng-template [ngIf]="color === 'red'">
+  <h1>Condition 1</h1>
+</ng-template>
+
+<!-- SWITCH CASE -->
+<div [ngSwitch]="color1">
+  <h1 *ngSwitchCase="'red'">Red</h1>
+  <h1 *ngSwitchCase="'black'">black</h1>
+  <h1 *ngSwitchDefault>Nothing</h1>
+</div>
+
+<!-- ngFor LOOP -->
+<h6 *ngFor="let x of users">{{ x }}</h6>
+<h6 *ngFor="let x of userDetails">{{ x.name }}<br />{{ x.rollNo }}</h6>
+
+<!-- DYNAMIC STYLE -->
+<p [style.color]="color2">Hellow</p>
+<button (click)="updateC()">Update color</button>
+
+<!-- HEADER -->
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Home1</a></li>
+    <li><a href="#">Home2</a></li>
+    <li><a href="#">Home3</a></li>
+  </ul>
+</nav>
+
+<!-- BASIC FORM -->
+<h1>Form</h1>
+<form #basicForm="ngForm" (ngSubmit)="getData1(basicForm.value)">
+  <input ngModel type="text" name="user" placeholder="name" />
+  <br />
+  <input ngModel type="email" name="mail" placeholder="mail" />
+  <br />
+  <input ngModel type="number" name="number" placeholder="number" />
+  <br />
+  <button>Submit</button>
+</form>
+<ul>
+  <li>{{ userdata.user }}</li>
+  <li>{{ userdata.mail }}</li>
+  <li>{{ userdata.number }}</li>
+</ul>
+
+<!-- TOGGLE ELEMENT -->
+<h3>Toggle</h3>
+<button (click)="toggle()">Toggle</button>
+<h5 *ngIf="display1">Heading Tag</h5>
+
+<!-- TODO LIST -->
+<h6>Todo List</h6>
+<input type="text" placeholder="Enter task" #task />
+<br />
+<button (click)="taskAdd(task.value)">Add Task</button>
+<ul *ngFor="let item of list">
+  <li>{{ item.name }}<button (click)="removetask(item.id)">Remove</button></li>
+</ul>
+
+<!-- SEND DATA FROM PARENT TO CHILD -->
+<!-- in parent class you need to define variable and data then
+you neeed to pass in parameter of child comp in parent comp 
+then you need to define input in child's ts file -->
+<app-child [item]="data4"></app-child>
