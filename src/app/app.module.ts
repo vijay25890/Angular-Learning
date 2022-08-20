@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ChildComponent } from './child/child.component';
+import { UsdToInrPipe } from '../usd-to-inr.pipe';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -13,6 +14,7 @@ import { ChildComponent } from './child/child.component';
     HelloComponent,
     UserDetailsComponent,
     ChildComponent,
+    UsdToInrPipe,
   ],
   bootstrap: [AppComponent],
 })

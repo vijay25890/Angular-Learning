@@ -118,4 +118,12 @@ export class AppComponent {
 
   // TWO WAY BINDING (updating and dispaling property at same time)
   name4: any;
+
+  // TEMPLATE REFERNCE VARIABLE
+  getVal(item4: any) {
+    console.log(item4);
+  }
+
+  // PIPES
+  date = Date();
 }

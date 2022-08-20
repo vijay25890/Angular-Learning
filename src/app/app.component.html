@@ -119,3 +119,13 @@ then you need to define input in child's ts file -->
 <!-- TWO WAY BINDING -->
 <input type="text" [(ngModel)]="name4" />
 <h4>{{ name4 }}</h4>
+
+<!-- TEMPLATE REFERNCE VARIABLE -->
+<input type="text" #box3 />
+<button (click)="getVal(box3.value)">Click</button>
+
+<!-- PIPES -->
+<h1>{{ name | uppercase }}</h1>
+<h1>{{ name | uppercase | slice: 1:2 }}</h1>
+<h1>{{ date | date: 'fullDate' }}</h1>
+<h3>{{ 10 | usdToInr:70 }}</h3>
