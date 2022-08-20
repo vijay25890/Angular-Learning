@@ -108,4 +108,14 @@ export class AppComponent {
       email: '@1235',
     },
   ];
+
+  // SEND DATA FROM CHILD TO PARENT
+  data5 = ' ';
+  updateData2(item: string) {
+    console.log(item);
+    this.data5 = item;
+  }
+
+  // TWO WAY BINDING (updating and dispaling property at same time)
+  name4: any;
 }

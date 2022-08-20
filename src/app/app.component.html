@@ -111,3 +111,11 @@ then you need to define input in child's ts file -->
 <ul *ngFor="let user of userD">
   <app-user-details [item]="user"></app-user-details>
 </ul>
+
+<!-- SEND DATA FROM CHILD TO PARENT  -->
+<app-child (updatedataEvent)="updateData2($event)"></app-child>
+<p>{{ data5 }}</p>
+
+<!-- TWO WAY BINDING -->
+<input type="text" [(ngModel)]="name4" />
+<h4>{{ name4 }}</h4>
