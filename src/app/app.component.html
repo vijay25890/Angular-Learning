@@ -106,3 +106,8 @@
 you neeed to pass in parameter of child comp in parent comp 
 then you need to define input in child's ts file -->
 <!-- <app-child [item]="data4"></app-child> -->
+
+<!-- REUSABLE COMPONENT -->
+<ul *ngFor="let user of userD">
+  <app-user-details [item]="user"></app-user-details>
+</ul>

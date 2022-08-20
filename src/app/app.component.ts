@@ -92,4 +92,20 @@ export class AppComponent {
 
   // SEND DATA FROM PARENT TO CHLD
   data4 = 0;
+
+  // REUSABLE COMPONENT
+  userD = [
+    {
+      name: 'vijay',
+      email: '@123',
+    },
+    {
+      name: 'ajay',
+      email: '@1234',
+    },
+    {
+      name: 'akash',
+      email: '@1235',
+    },
+  ];
 }
