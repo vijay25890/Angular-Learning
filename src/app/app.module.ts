@@ -7,9 +7,16 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { ChildComponent } from './child/child.component';
 import { UsdToInrPipe } from '../usd-to-inr.pipe';
 import { RedElDirective } from './red-el.directive';
+import { UserComponent } from './user/user.component';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NoPageComponent } from './no-page/no-page.component';
+import { AboutComponent } from './about/about.component';
+import { AboutCompanyComponent } from './about-company/about-company.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
   declarations: [
     AppComponent,
     HelloComponent,
@@ -17,6 +24,12 @@ import { RedElDirective } from './red-el.directive';
     ChildComponent,
     UsdToInrPipe,
     RedElDirective,
+    UserComponent,
+    HomeComponent,
+    NoPageComponent,
+    AboutComponent,
+    AboutCompanyComponent,
+    AboutMeComponent,
   ],
   bootstrap: [AppComponent],
 })
