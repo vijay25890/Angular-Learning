@@ -6,6 +6,7 @@ import { HelloComponent } from './hello.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ChildComponent } from './child/child.component';
 import { UsdToInrPipe } from '../usd-to-inr.pipe';
+import { RedElDirective } from './red-el.directive';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
@@ -15,6 +16,7 @@ import { UsdToInrPipe } from '../usd-to-inr.pipe';
     UserDetailsComponent,
     ChildComponent,
     UsdToInrPipe,
+    RedElDirective,
   ],
   bootstrap: [AppComponent],
 })
