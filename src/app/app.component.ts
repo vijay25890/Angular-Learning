@@ -1,5 +1,5 @@
 import { Component, VERSION } from '@angular/core';
-
+import { FormControl, FormGroup, Validator, Validators } from '@angular/forms';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -126,4 +126,27 @@ export class AppComponent {
 
   // PIPES
   date = Date();
+
+  // FORMS
+  // TEMPLATE DRIVEN FORM
+  userLogin(item: any) {
+    console.log(item);
+  }
+
+  // REACTIVE FORMS
+  loginF = new FormGroup({
+    name1: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.email,
+      Validators.pattern('[A-Z]+$'),
+    ]),
+    password1: new FormControl(''),
+  });
+  loginUser1() {
+    console.log(this.loginF.value);
+  }
+  get userx() {
+    return this.loginF.get('name1');
+  }
 }

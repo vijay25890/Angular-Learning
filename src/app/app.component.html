@@ -128,4 +128,30 @@ then you need to define input in child's ts file -->
 <h1>{{ name | uppercase }}</h1>
 <h1>{{ name | uppercase | slice: 1:2 }}</h1>
 <h1>{{ date | date: 'fullDate' }}</h1>
-<h3>{{ 10 | usdToInr:70 }}</h3>
+<h3>{{ 10 | usdToInr: 70 }}</h3>
+
+<!-- FORMS -->
+<!-- TEMPLATE DRIVEN FORM -->
+<form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
+  <input type="text" name="name" placeholder="Name" ngModel />
+  <br />
+  <input type="password" name="password" placeholder="Password" ngModel />
+  <br />
+  <button>Login</button>
+</form>
+
+<!-- REACTIVE FORMS -->
+<form [formGroup]="loginF" (ngSubmit)="loginUser1()">
+  <input type="text" name="name1" placeholder="Name" formControlName="name1" />
+  <br />
+  <span *ngIf="userx && userx.invalid && userx.touched">Enter valid name</span>
+  <br />
+  <input
+    type="password"
+    name="password1"
+    placeholder="Password"
+    formControlName="password1"
+  />
+  <br />
+  <button [disabled]="loginF.invalid">Login1</button>
+</form>
