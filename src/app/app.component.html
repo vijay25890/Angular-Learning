@@ -175,3 +175,9 @@ then you need to define input in child's ts file -->
 <a routerLink="user/20">User</a>
 <a routerLink="user/30">User</a>
 <router-outlet></router-outlet>
+
+<!-- SERVICES -->
+<ul>
+  <li *ngFor="let data of memberData">{{ data.name }}</li>
+</ul>
+<app-footer></app-footer>

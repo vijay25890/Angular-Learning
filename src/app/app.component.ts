@@ -1,5 +1,7 @@
 import { Component, VERSION } from '@angular/core';
 import { FormControl, FormGroup, Validator, Validators } from '@angular/forms';
+import { ServiceService } from './services/service.service';
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -7,12 +9,12 @@ import { FormControl, FormGroup, Validator, Validators } from '@angular/forms';
 })
 export class AppComponent {
   // SET TIMEOUT
-  a = 5;
-  constructor() {
-    setTimeout(() => {
-      this.a = 10;
-    }, 3000);
-  }
+  // a = 5;
+  // constructor() {
+  //   setTimeout(() => {
+  //     this.a = 10;
+  //   }, 3000);
+  // }
 
   // INPUT AND BUTTONS
   getData(a: string) {
@@ -149,4 +151,16 @@ export class AppComponent {
   get userx() {
     return this.loginF.get('name1');
   }
+
+  // SERVICES
+  memberData = [
+    { name: 'Vijay', email: 'vm@123' },
+    { name: 'Vijay1', email: 'vm@1234' },
+    { name: 'Vijay2', email: 'vm@12345' },
+    { name: 'Vijay3', email: 'vm@123456' },
+  ];
+
+  // constructor(private data0: ServiceService) {
+  //   console.log('data4', data0);
+  // }
 }
