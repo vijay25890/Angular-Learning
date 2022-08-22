@@ -2,6 +2,10 @@ import { Component, VERSION } from '@angular/core';
 import { FormControl, FormGroup, Validator, Validators } from '@angular/forms';
 import { ServiceService } from './services/service.service';
 import { UsersDataService } from './services/users-data.service';
+interface dataType {
+  name: string;
+  id: number;
+}
 
 @Component({
   selector: 'my-app',
@@ -181,4 +185,13 @@ export class AppComponent {
   //     console.log(res);
   //   });
   // }
+
+  // MODEL
+  getDt() {
+    const data: dataType = {
+      name: 'vijay more',
+      id: 57,
+    };
+    return data;
+  }
 }
