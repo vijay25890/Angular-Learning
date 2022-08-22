@@ -15,9 +15,16 @@ import { AboutComponent } from './about/about.component';
 import { AboutCompanyComponent } from './about-company/about-company.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+  ],
   declarations: [
     AppComponent,
     HelloComponent,

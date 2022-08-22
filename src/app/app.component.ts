@@ -1,6 +1,7 @@
 import { Component, VERSION } from '@angular/core';
 import { FormControl, FormGroup, Validator, Validators } from '@angular/forms';
 import { ServiceService } from './services/service.service';
+import { UsersDataService } from './services/users-data.service';
 
 @Component({
   selector: 'my-app',
@@ -162,5 +163,14 @@ export class AppComponent {
 
   // constructor(private data0: ServiceService) {
   //   console.log('data4', data0);
+  // }
+
+  // API CALLING
+  // users2: any;
+  // constructor(private userData: UsersDataService) {
+  //   userData.users().subscribe((e) => {
+  //     this.users2 = e;
+  //     console.log(e);
+  //   });
   // }
 }
