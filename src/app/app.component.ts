@@ -173,4 +173,12 @@ export class AppComponent {
   //     console.log(e);
   //   });
   // }
+
+  // POST API
+  // getUserFormdata(data: any) {
+  //   console.log(data);
+  //   this.userData.saveUsers(data).subscribe((res) => {
+  //     console.log(res);
+  //   });
+  // }
 }
