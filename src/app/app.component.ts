@@ -2,6 +2,7 @@ import { Component, VERSION } from '@angular/core';
 import { FormControl, FormGroup, Validator, Validators } from '@angular/forms';
 import { ServiceService } from './services/service.service';
 import { UsersDataService } from './services/users-data.service';
+
 interface dataType {
   name: string;
   id: number;
